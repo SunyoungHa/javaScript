@@ -1,0 +1,31 @@
+
+// Ask the user how many verses they want to hear.
+// Write code that console logs the "Bottles of Sprite on the wall" song:
+// 10 bottles of Sprite on the wall,
+// 10 bottles of Sprite!
+// Take one down and pass it around,
+// 9 bottles of Sprite on the wall!
+
+// How would you fix "1 bottles of Sprite"?
+// How would you change "0" to "No more"?
+  
+  
+var bottle = parseInt(prompt('how many verses you want to hear?'));
+
+while (bottle>=0 && bottle<11 ){
+  if (bottle===0){
+  console.log ("No more bottle of Sprite on the wall");
+  }
+  
+  else if(bottle===1){
+  console.log ("1 bottles of Sprite")
+  } 
+
+  else{
+  console.log (bottle + " bottles of Sprite on the wall. " + bottle +  " bottles of Sprite! Take one down and pass it around," + (bottle - 1) + " bottles of Sprite on the wall!" );
+  }
+
+bottle--;
+  
+}
+
