@@ -1,0 +1,60 @@
+//1. Create a list of people you intend to send holiday cards. Write a for loop to display a custom greeting inside each card. For example, the custom greeting can be: "Dear [name], Happy Holidays!"
+
+var greeting = ["Rev","Catie","Magical","Tia","classmates"];
+
+function message(card) {
+ for (var i=0; i<card.length; i++){
+   console.log("Dear " + card[i] + " , Happy Holidays!")
+} 
+} 
+message(greeting);
+
+
+ 
+
+var name = ["Rev","Catie","Magical","Tia","classmates"];
+
+for (var i=0; i<name.length; i++){
+   console.log("Dear " + name[i] + " , Happy Holidays!")
+} 
+
+
+
+
+
+//2. A college student's cloud drive has a whole bunch of items. Write a for loop that looks for a file with the title of "essay". When successful, print: "The essay has been found." If unsuccessful, print: "There are no matches in this folder for the title searched."
+
+
+// why it printed out several times????
+var myDrive = ["English", "essay", "science"];
+
+function findFile(drive) {
+  var search = prompt('what file are you looking for?');
+  if (search) {
+    alert("Please wait while we look for your file.")
+  }
+  for (var i=0; i<drive.length ; i++) {
+    if (drive[i] === search){
+      console.log("The file named " + search + " has been found." )
+    } else {
+      console.log("There are no matches in this folder for the title searched.")
+    }
+  }
+}
+findFile(myDrive);
+
+
+//3. A donor has photos in .jpg format of each of her handbags, which she wishes to upload for auction to raise funds for her favorite charity. The website is handbags4all.org. Create a for loop that prints the absolute path for each .jpg file to display in the browser.
+//Bonus: select one of the exercises and refactor using a function that accepts argument(s).
+
+
+var photos = ['clothes','laptop','gloves'];
+
+function path(jpg) {
+  for (var i=0; i<jpg.length; i++){
+    console.log(jpg[i] + " .jpg");
+  }
+}
+
+photos.push('utensil')
+path(photos);
