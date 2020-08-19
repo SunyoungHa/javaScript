@@ -1,0 +1,20 @@
+
+//2. A college student's cloud drive has a whole bunch of items. Write a for loop that looks for a file with the title of "essay". When successful, print: "The essay has been found." If unsuccessful, print: "There are no matches in this folder for the title searched."
+
+
+var myDrive = ["English", "essay", "science"];
+
+function findFile(drive) {
+  var search = prompt('what file are you looking for?');
+  if (search) {
+    alert("Please wait while we look for your file.")
+  }
+  for (var i=0; i<drive.length ; i++) {
+    if (drive[i] === search){
+      console.log("The file named " + search + " has been found." )
+    } else {
+      console.log("There are no matches in this folder for the title searched.")
+    }
+  }
+}
+findFile(myDrive);
