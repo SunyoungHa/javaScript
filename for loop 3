@@ -1,0 +1,13 @@
+// Create an array called favoriteFood and add 6 items to the array.
+// Create a function called printFoods that passes the argument “lists” through it.
+// Within the function, create a for loop that writes to the document “My number [ ] favorite food is [ ]” for each item in the array.
+// Call the function with the favoriteFood array.
+
+favoriteFood = ['burger','pizza','ramen','corndog','sushi','spagetti'];
+
+function printFoods(list){
+  for (var i=0; i<list.length; i++)
+    console.log ("My number " + [i] + " favorite food is " 
+                +list[i]);
+}
+printFoods(favoriteFood);
