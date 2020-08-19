@@ -1,0 +1,32 @@
+/* Create an array of objects, where each object describes a book and has 3 properties: title (a string), author (a string), alreadyRead (a boolean to note if you've read it yet).
+
+Iterate through the array of books. For each book, log the book title and its author like so: "The Hobbit by J.R.R. Tolkien".
+
+Now use an if/else statement to change the output depending on whether you've read it yet or not. If you've read it, log a string: 'You already read "The Hobbit" by J.R.R. Tolkien'; if not, log a string: 'You still need to read "The Lord of the Rings" by J.R.R. Tolkien.'
+ */
+
+var book1 = {
+  title:"Hobbit",
+  author : "Tolkien ",
+  alreadyRead :true
+};
+
+var book2 = {
+  title:"War and Peace ",
+  author : "Tolstoy ",
+  alreadyRead :false
+};
+
+var array= [book1,book2];
+
+function books(list){
+  for (var i=0; i<list.length; i++){
+    if (list[i].alreadyRead===true){
+        console.log(list[i].title + ' by ' + list[i].author )
+    }
+    else {
+         console.log('You still need to read ' + list[i].title + 'by ' + list[i].author )
+  }
+}
+}
+books(array);
