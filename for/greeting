@@ -1,0 +1,19 @@
+//1. Create a list of people you intend to send holiday cards. Write a for loop to display a custom greeting inside each card. For example, the custom greeting can be: "Dear [name], Happy Holidays!"
+
+var greeting = ["Rev","Catie","Magical","Tia","classmates"];
+
+function message(card) {
+ for (var i=0; i<card.length; i++){
+   console.log("Dear " + card[i] + " , Happy Holidays!")
+} 
+} 
+message(greeting);
+
+
+ 
+
+var name = ["Rev","Catie","Magical","Tia","classmates"];
+
+for (var i=0; i<name.length; i++){
+   console.log("Dear " + name[i] + " , Happy Holidays!")
+} 
