@@ -1,0 +1,14 @@
+//3. A donor has photos in .jpg format of each of her handbags, which she wishes to upload for auction to raise funds for her favorite charity. The website is handbags4all.org. Create a for loop that prints the absolute path for each .jpg file to display in the browser.
+//Bonus: select one of the exercises and refactor using a function that accepts argument(s).
+
+
+var photos = ['clothes','laptop','gloves'];
+
+function path(jpg) {
+  for (var i=0; i<jpg.length; i++){
+    console.log(jpg[i] + " .jpg");
+  }
+}
+
+photos.push('utensil')
+path(photos);
