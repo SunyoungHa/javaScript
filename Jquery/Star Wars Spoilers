@@ -1,0 +1,30 @@
+<html>
+<head>
+	<title>Star Wars Spoilers</title>
+</head>
+<body>
+  
+	<img src="https://upload.wikimedia.org/wikipedia/en/e/ee/DeathStar2.jpg" />
+    <p class="spoiler">
+		<span>Darth Vader is Luke Skywalker's Father! Noooooooooooo!</span>
+	</p>
+  
+	<script src="https://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8">
+  //Hide the spoiler
+
+    $("span").hide();
+  
+  //Add a button that covers the spoiler that says Click here for a spoiler. (The css has already been written.)
+  $("p").append("<button>Click here for a spoiler!</button>");
+  
+  
+//When the user clicks on the button, the warning should hide, and they should see the spoiler!
+  $("button").click(function(){
+    $("button").hide();
+    $("span").show();
+
+  });
+  </script>
+  
+</body>
+</html>
