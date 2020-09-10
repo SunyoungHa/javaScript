@@ -1,0 +1,24 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+<input type="text" name="name" id="name" required>
+	<button >Click me!</button>
+<script src="https://code.jquery.com/jquery-3.1.0.js">
+
+$(document).ready(function() {
+// write jQuery here so that whatever the user types into the form is logged to the console
+$("button").click(function(){
+  var name = $("input").val();
+  alert(name);
+});
+});
+
+
+</script>
+  
+</body>
+</html>
