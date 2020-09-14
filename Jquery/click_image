@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  
+    <script>
+
+    
+$(document).ready(function(){
+  $( "#panda" ).click(function() {
+  var question = prompt( "Do you like pandas?" );
+    console.log(question);
+  if ( question === "yes" ) {
+    alert(" Me too!  ")
+    console.log(":)")
+  } else {
+    $("#panda").hide();
+    console.log(" :( ")
+  }
+  });
+  });
+    </script>
+
+</head>
+<body>
+<!-- Put an image of a panda in your html, with a class of "panda". -->
+
+  
+<input type="image" id="panda" alt="panda"
+       src="https://media.npr.org/assets/img/2019/11/15/giant-panda-bei-bei-20180608-051skipbrown-_wide-5621060ac353db3650a31d9b8cb078bbbfccd9e5-s800-c85.png">
+
+  
+  
+
+  
+  
+  <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+  
+</body>
+</html>
