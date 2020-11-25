@@ -1,0 +1,20 @@
+function vacuumCleaner(brand, price, handheld){
+  this.brand = brand;
+  this.price = price;
+  this.handheld = handheld;
+  return brand + ' ' + price + ' ' + handheld
+}
+
+var result1 = new vacuumCleaner("Dyson","$100", true);
+console.log(result1.price);
+
+
+function Car(make, model, year) {
+  this.make = make;
+  this.model = model;
+  this.year = year;
+}
+
+const car1 = new Car('Eagle', 'Talon TSi', 1993);
+
+console.log(car1.make);
