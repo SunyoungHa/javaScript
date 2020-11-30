@@ -1,0 +1,41 @@
+
+// A description of the task.
+// An attribute to define if the task is done.
+// A method to call when it is done.
+
+
+var todo = {
+  todoList: function(taskName) {
+    return this.taskName + " is " + this.done;
+  }
+}
+var todo1 = {
+  taskName:"udemy",
+  done: "done"
+}
+var todo2 = {
+  taskName:"practicum1",
+  done: "undone"
+}
+var result =  todo.todoList.call(todo1); 
+console.log(result)
+
+
+
+function anotherTodo(taskName){
+  this.taskName=taskName;
+  this.isDone = function(){
+     if (isDone = true){
+           console.log('DONE')
+     }     
+    else { 
+      console.log('NOT YET')
+    }
+  }
+}
+var anotherResult = new anotherTodo('udemy', false);
+console.log(anotherResult);
+
+
+
+
