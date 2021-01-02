@@ -1,0 +1,33 @@
+function birthdayProbability() {
+ var numInRoom= +prompt('Please enter a number that is greater than 0 for the number of people in a room.') ;
+ if(numInRoom>23) {
+    console.log(`Of the ${numInRoom} people in the room, there is less than 50% chance of 2 people having the same birthday.`);
+   }
+ else if(numInRoom%23===0) {
+    console.log(`Of the ${numInRoom} people in the room, there is 50% chance of 2 people having the same birthday.`);
+   }
+ else {
+    console.log(`Of the ${numInRoom} people in the room, there is more than 50% chance of 2 people having the same birthday.`);
+   }
+}
+
+birthdayProbability();
+
+
+// another approach 
+const people = 23;	 
+const samePercent =2;
+
+
+function sameBirthday() {
+  var peopleRoom  = +prompt ("how many people in a room")
+  var birthProbability = Math.round(peopleRoom*samePercent/people);
+//   return Math.round(birthProbability)
+  console.log (`If there is ${peopleRoom} people in room, there is ${birthProbability}% of chance to have the same birthday`)
+
+}
+
+sameBirthday();
+
+
+  
