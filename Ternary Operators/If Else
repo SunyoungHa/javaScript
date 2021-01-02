@@ -1,0 +1,43 @@
+//Q1: Given the following function's if-else statement: 
+function installFilm1() {
+  var small = +prompt('How many 11"x16" window panes do you have?');
+  var medium = +prompt('How many 18"x31" window panes do you have?');
+  var large = +prompt('How many 22"x24" window panes do you have?');
+  var smallPrice = small * 10;
+  var mediumPrice = medium * 16;
+  var largePrice = large * 30;
+  var totalPrice = 0;
+  var quote = "";
+  if (small > 0 || medium > 0 || large > 0) {
+    totalPrice = smallPrice + mediumPrice + largePrice;
+    quote = `The total estimated cost for the window film is: $${totalPrice}`;
+  } else {
+    quote = `The total estimated cost for the window film is pending.`;
+  }
+  return quote;
+}
+
+//Starting on Line 21, refactor installFilm using a ternary operator.
+function refactoredInstallFilm() {
+  var small = +prompt('How many 11"x16" window panes do you have?');
+  var medium = +prompt('How many 18"x31" window panes do you have?');
+  var large = +prompt('How many 22"x24" window panes do you have?');
+  var smallPrice = small * 10;
+  var mediumPrice = medium * 16;
+  var largePrice = large * 30;
+  var totalPrice = smallPrice + mediumPrice + largePrice;
+  var quote = (small > 0 || medium > 0 || large > 0) 
+  ?  `The total estimated cost for the window film is: $${totalPrice}` 
+  :  `The total estimated cost for the window film is pending.` ; 
+  return quote;
+  }
+
+
+//Q2: How do we call the refactored function in Q1?
+var result = refactoredInstallFilm()
+
+//Q3: How can we see the returned quote in the console?
+console.log(result);
+
+
+
