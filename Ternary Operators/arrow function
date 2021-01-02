@@ -1,0 +1,25 @@
+: 
+
+
+
+//Q1: Create an arrow function called makeDo that returns a ternary statement. makeDo accepts ingredients that are in your fridge and pantry to make a tasty dish.
+
+makeDo = () => {
+  var inFridge = prompt ('Is it in your fridge? Answer yes or no') ;
+  var inPantry = prompt ('Is it in your pantry? Answer yes or no') ;
+  return (inFridge === 'yes' && inPantry  === 'yes') ? 'Make a tasty dish' : 'Keep ingredients in your fridge and pantry';
+};
+
+
+// function makeDo() {
+//   var inFridge = prompt ('Is it in your fridge? Answer yes or no') ;
+//   var inPantry = prompt ('Is it in your pantry? Answer yes or no') ;
+//   return (inFridge === 'yes' && inPantry  === 'yes') ? 'Make a tasty dish' : 'Keep ingredients in your fridge and pantry';
+// };
+
+//Q2: How do you call the function in Q1?
+makeDo();
+
+//Q3: How can we see the returned statement in the console?
+var result1 = makeDo();
+console.log(result1)
