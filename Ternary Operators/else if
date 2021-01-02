@@ -1,0 +1,36 @@
+//Q1: Given the following function's if-else statement: 
+// function installFilm() {
+//   var small = +prompt('How many 11"x16" window panes do you have?');
+//   var medium = +prompt('How many 18"x31" window panes do you have?');
+//   var large = +prompt('How many 22"x24" window panes do you have?');
+//   var smallPrice = small * 10;
+//   var mediumPrice = medium * 16;
+//   var largePrice = large * 30;
+//   var totalPrice = smallPrice + mediumPrice + largePrice;
+//   var quote = (small > 0 || medium > 0 || large > 0) ? `The total estimated cost for the window film is: $${totalPrice}.` : `The total estimated cost for the window film is pending.`;
+//   return quote;
+// }
+
+//Starting on Line 15, refactor installFilm to add an else-if statement using a ternary operator to accommodate custom window film sizes that is $1 per inch. Ensure that its quote returns a value of: "The estimated cost for the pre-sized windows are [totalPrice] and the estimated cost for the custom windows are [customPrice]."
+installFilm2 = () => {
+  var small = +prompt('How many 11"x16" window panes do you have?');
+  var medium = +prompt('How many 18"x31" window panes do you have?');
+  var large = +prompt('How many 22"x24" window panes do you have?');
+  var smallPrice = small * 10;
+  var mediumPrice = medium * 16;
+  var largePrice = large * 30;
+  var totalPrice = smallPrice + mediumPrice + largePrice;
+  customPrice = small + medium + large;
+  var quote = (small > 0 || medium > 0 || large > 0) ? `The total estimated cost for the window film is: $${totalPrice}.` 
+  : (small > 100 || medium >100 || large > 100) ? `The estimated cost for the pre-sized windows are ${totalPrice} and the estimated cost for the custom windows are ${customPrice}.`
+   :`The total estimated cost for the window film is pending.`;
+  return quote;
+  
+}
+
+//Q2: How do we call the refactored function in Q1?
+installFilm2()
+//Q3: How can we see the returned quote in the console?
+  
+ var result = installFilm2()
+ console.log(result);
