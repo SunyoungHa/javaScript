@@ -1,0 +1,29 @@
+//Create a function that prompts the user for three numbers, any number from 0 to 255. These numbers will inform the rgb value to store as a string: "rgb(num1, num2, num3)". Then the function will utilize jQuery to change the body's background color to the rgb value.
+
+//Consider if:
+//a. backticks are needed for strings or string interpolation.
+//b. unary plus operator is needed for numbers.
+//c. Math properties or methods are needed for the numbers.
+//d. Number properties or methods are needed for the numbers.
+//e. jQuery review of selection and method is needed. Ensure jQuery library is added.
+//f. the function's code block has everything it needs to change the background color.
+
+function changeRgb() {
+ var rgb1= prompt('Please enter first number from 0 to 255') ;
+ var rgb2= prompt('Please enter second number from 0 to 255') ;
+ var rgb3= prompt('Please enter third number from 0 to 255') ;
+
+
+ // console.log (`rgb(${rgb1},${rgb2},${rgb3})`)
+
+ var result= (`rgb(${rgb1},${rgb2},${rgb3})`)
+ 
+//  console.log (result)
+$(document).ready(function(){
+$('body').css('background-color',result);
+
+});
+ }
+
+changeRgb();
+
