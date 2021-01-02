@@ -1,8 +1,0 @@
-const keys = [1,2,3];
-const keys1 = keys.map(key => 'bobs' + key);
-console.log(keys1);
-
-
-const a= ["bobs1", "bobs2", "bobs3"];
-const b = a.map(keyword => keyword.concat('I like ', keyword))
-console.log(b);

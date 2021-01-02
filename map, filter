@@ -1,0 +1,34 @@
+const keys = [1,2,3];
+const keys1 = keys.map(key => 'bobs' + key);
+console.log(keys1);
+
+
+const a= ["bobs1", "bobs2", "bobs3"];
+const b = a.map(keyword => keyword.concat('I like ', keyword))
+console.log(b);
+
+
+// const dogs= ["shitsu", "terrier", "jindo"];
+// const source= dogs.map(breed =>"
+//  <img src="https://www.dogdog.com/" + breed + ".png"/>`);
+// console.log(source); 
+
+
+// const colors= ["teal", "red", "blue"];
+// const collection = colors.map(function(item,i){
+// return {index:i,color:item}
+// })
+// console.log(collection);
+
+const colors= ["teal", "red", "blue", "orange"];
+const handle= ["sunshine", "supergirl", "jaybee"];
+const collection1 = colors.map(function(item,i){
+  var handles =handle[i]
+  return {index:i, color:item, handles:handles}
+})
+console.log(collection1);
+
+
+const nums = [1,2,3];
+const nums1 = nums.filter(num => num % 2 === 1);
+console.log(nums1);
