@@ -1,0 +1,22 @@
+//Use .sort() to order by title, by artist and by year in ascending order.
+const paintings = [
+  {title: "Mona Lisa", artist: "Leonardo da Vinci", year: 1517},
+  {title: "Shot Blue Marilyn", artist: "Andy Warhol", year: 1964},
+  {title: "Las Dos Fridas", artist: "Frida Kahlo", year: 1939}
+];
+//By title:
+
+var byTitle = paintings.sort((a,b) => a.title > b.title ? 1: -1);
+console.log(byTitle)
+
+
+var byTitle2 = paintings.sort((a,b) => a.title > b.title ? -1: 1);
+console.log(byTitle2)
+// //By artist:
+
+var byArtist = paintings.sort((a,b) => a.artist > b.artist ? 1: -1);
+console.log(byArtist)
+
+//By year
+var byYear = paintings.sort((a,b) => a.year - b.year);
+console.log(byYear)
