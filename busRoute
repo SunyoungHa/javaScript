@@ -1,0 +1,69 @@
+//Consider using any of the select methods: 
+//.map(), .filter(), .splice(), .sort(), .forEach()
+
+//A client would like the bus route table to be more flexible for users, preferrably by bus route name, bus number, and time interval.
+var buses = [
+  {name: "MacArthur", id: 18, time: 60},
+  {name: "Telegraph", id: 52, time: 15},
+  {name: "San Pablo", id: 9, time: 30},
+  {name: "Fruitvale", id: 22, time: 20}
+]
+
+//Q1: Order the buses so that they are ordered by bus name. Store this in a variable called busNames.
+var busNames = buses.sort((a,b) => a.name > b.name ? 1: -1);
+console.log(busNames)
+
+//Q2: Order the buses so that they are ordered by id in ascending order. Store this in a variable called busIds.
+var busIds = buses.sort((a,b) => a.id - b.id);
+console.log(busIds)
+
+
+//Q3: Order the bus time interval in ascending order. Store this in a variable called busIntervals.
+
+var busIntervals = buses.sort((a,b) => a.time - b.time);
+console.log(busIntervals);
+
+
+//Q4: Your PM informs you that the client hears that users prioritize the busName. Log the results in the console: "The [bus id] [bus name] arrives in [time] minutes."
+
+
+const busName = [];   
+
+buses.forEach(buses => busName.push("The " + buses.id +" " +buses.name + " arrives in " + buses.time + " minutes."  ))
+console.log(busName);
+
+
+
+//Q5: Your PM reports that the client next wants all the buses that will arrive in 20 minutes or less. Log the results to the console: "The [bus id] [bus name] will arrive within [time] minutes."
+
+
+function filterByTime(item) {
+  if (item.time <= 20) {
+    console.log ( `The ${item.id} ${item.name} will arrive within ${item.time} minutes.` )
+ }
+}
+
+let arrByTime = buses.filter(filterByTime)
+
+
+
+//Q6: Your PM informs you that the client has added a new bus line, the 67 Shattuck that will run every 60 minutes. Add this to the busNames collection so that the collection's names appear in alphabetical order.
+
+
+var buses = [
+  {name: "MacArthur", id: 18, time: 60},
+  {name: "Telegraph", id: 52, time: 15},
+  {name: "San Pablo", id: 9, time: 30},
+  {name: "Fruitvale", id: 22, time: 20}
+]
+
+const newBus = {name: "Shattuck", id: 67, time:60};
+
+const newBuses = buses.push(newBus)
+// console.log (buses)
+
+
+var NewBusNames = buses.sort((a,b) => a.name > b.name ? 1: -1);
+console.log( NewBusNames )
+
+
