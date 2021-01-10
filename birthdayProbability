@@ -1,35 +1,77 @@
+//In a room of 23 people, there’s a 50% chance of 2 people having the same birthday. In a room of 46 people, there's a 50% chance of 4 people having the same birthday. In a room of 69 people, there's a 50% chance of 6 people having the same birthday.
+
+//Create a function that prompts the user for the number of people in a room and returns the number of people who have the same birthday. Then log a result to the console.
+
+//Q1: What is an appropriate name for this function?
+
+//Q2: Inputs Question: The prompt for the user to enter a number appears when the function is called. So does this function need a parameter?
+
+//Q3: Go through the following steps to write the code block for the function.
+//Outputs Consideration: Observe what the function returns.
+//3a. Looking at these 3 statements, consider how many variables this function may need:
+//3a1. In a room of 23 people, there’s a 50% chance of 2 people having the same birthday.
+//3a2. In a room of 46 people, there's a 50% chance of 4 people having the same birthday. 
+//3a3. In a room of 69 people, there's a 50% chance of 6 people having the same birthday.
+
+//Determine the number of variables.
+//3b. After considering the number of variables the function may need, look closely at each statement to see what actually varies, what changes.
+//3b1. Your observation about the number of changes means that your function will need to consider the number of variables based on the number of changes. How many variables does your function need?
+//3b2. Given the number of variable(s) your function needs, list the kind of information each variable must store:
+
+//Appropriate naming of variables.
+//3c1. If the prompt asks the user for a number to be the number of people in the room, what is an appropriate name for this variable?
+//3c2. If there is another variable for the function in your answer to 3b2, what is an appropriate name for this variable? 
+
+//Scenarios
+//3d1. Consider the different scenarios for the number given by the user:
+//The number can be less than 23.
+//The number can be equal to 23 (or a multiple of 23).
+//The number can be greater than 23.
+//3d2. What kind of statements may we need to use to consider each of the above scenarios?
+
+//Return Statements
+//3e1. If there are less than 23 people, have the function return "Of the [number] people in the room, there is less than 50% chance of 2 people having the same birthday."
+//3e2. If the number is a multiple of 23, have the function return "Of the [number] people in the room, there is a 50% chance of [number] people having the same birthday."
+//3e3. If there are more than 23 people in the room and the number is not a multiple of 23, then have the function return "Of the [number] people in the room, there is more than 50% chance of [number] people having the same birthday." 
+
 function birthdayProbability() {
- var numInRoom= +prompt('Please enter a number that is greater than 0 for the number of people in a room.') ;
- if(numInRoom > 23 && numInRoom % 23 !==0 ) {
+ var numInRoom= +prompt('Please enter a number that is greater than 0 for the number of 2 people in a room.') ;
+ if(numInRoom < 23) {
     console.log(`Of the ${numInRoom} people in the room, there is less than 50% chance of 2 people having the same birthday.`);
    }
+ //3e2. If the number is a multiple of 23, have the function return "Of the [number] people in the room, there is a 50% chance of [number] people having the same birthday."
  else if(numInRoom%23 === 0) {
-    console.log(`Of the ${numInRoom} people in the room, there is 50% chance of 2 people having the same birthday.`);
+    console.log(`Of the ${numInRoom} people in the room, there is 50% chance of ${numInRoom/23*2}  people having the same birthday.`);
    }
+   // If there are more than 23 people in the room and the number is not a multiple of 23, then have the function return "Of the [number] people in the room, there is more than 50% chance of [number] people having the same birthday." 
  else {
-    console.log(`Of the ${numInRoom} people in the room, there is more than 50% chance of 2 people having the same birthday.`);
+    console.log(`Of the ${numInRoom} people in the room, there is more than 50% chance of ${Math.floor(numInRoom/23)*2} people having the same birthday.`);
    }
 }
+
+// if numInRoom = 50 {Math.floor(numInRoom/23)*2}  46<x<69
+// "Of the 50 people in the room, there is more than 50% chance of 4 people having the same birthday."
 
 var result = birthdayProbability();
 console.log(result);
 
+
+
+
+
+
+
 // another approach 
-const people = 23;	 
-const samePercent =2;
+// const people = 23;	 
+// const samePercent =2;
 
 
-function sameBirthday() {
-  var peopleRoom  = +prompt ("how many people in a room")
-  var birthProbability = Math.round(peopleRoom*samePercent/people);
-//   return Math.round(birthProbability)
-  console.log (`If there is ${peopleRoom} people in room, there is ${birthProbability}% of chance to have the same birthday`)
+// function sameBirthday() {
+//   var peopleRoom  = +prompt ("how many people in a room")
+//   var birthProbability = Math.round(peopleRoom*samePercent/people);
+// //   return Math.round(birthProbability)
+//   console.log (`If there is ${peopleRoom} people in room, there is ${birthProbability}% of chance to have the same birthday`)
 
-}
+// }
 
-sameBirthday();
-
-
-  
- 
-
+// sameBirthday();
