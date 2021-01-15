@@ -1,0 +1,19 @@
+<button type="button" class="btn">Click me!</button>
+<p class="text">Replace me!!</p>
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+
+$('.btn').click(function() {
+  
+  $('.text').text('loading . . .');
+  
+  fetch('https://cat-fact.herokuapp.com/facts')
+  .then(response => response.json())
+  .then(data => console.log(data));
+  
+  //Add code to display all of the Cat Facts  
+  for (var i = 0 ; i < data.length ; i++) {
+  $('.text').text(data[i]);
+}
+});
+
