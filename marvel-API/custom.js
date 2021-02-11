@@ -16,13 +16,18 @@ $(document).ready(function() {
             }
         }
     
- 
-    $('.btn').click(function(event) {
-    searchMarvel(event);
-    $( "#searchResult" ).empty();
+        $("#name").on("keypress", function(event){
+            if(event.which == 13){
+                searchMarvel(event);
+                $( "#searchResult" ).empty();
+            }
+        });
 
-
-    });
+        
+        $('#button').click(function(event) {
+        searchMarvel(event);
+        $( "#searchResult" ).empty();
+        });
 
 });
 
