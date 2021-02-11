@@ -1,7 +1,8 @@
+// async await
 $(document).ready(function() {
             async function searchMarvel(event) {
                 try {
-                    event.preventDefault(event);
+                    event.preventDefault();
                     var name = $('#name').val();
                     let response = await fetch(`http://gateway.marvel.com:80/v1/public/characters?nameStartsWith=${name}&&limit=12&ts=1&apikey=c94587992d8338a43dea5874e3228f95&hash=843970bfcb95eb9fd92e94f4162165ae`);
                     let data = await response.json();
@@ -16,16 +17,19 @@ $(document).ready(function() {
         }
     
  
-$('.btn').click(function(event) {
-searchMarvel(event);
-});
+    $('.btn').click(function(event) {
+    searchMarvel(event);
+    $( "#searchResult" ).empty();
+
+
+    });
 
 });
 
 
 
 
-// .then instead of await
+// .then 
 
 // $(document).ready(function() {
 //             function searchMarvel(event) {
